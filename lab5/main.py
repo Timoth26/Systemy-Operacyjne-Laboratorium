@@ -11,4 +11,4 @@ if __name__ == '__main__':
         board = players_move and get_user_move(board) or ai_move(board)
         players_move = not players_move
 
-    annouce_outcome(board, players_move)
+    announce_outcome(board, players_move)
