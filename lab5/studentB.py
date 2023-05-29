@@ -10,12 +10,16 @@ def ai_move(board):
     if ' ' not in board:
         return board
 
+    print('Ruch AI')
+
     x = randint(0, 4)
     y = randint(0, 4)
 
     while board[x][y] != ' ':
         x = randint(0, 4)
         y = randint(0, 4)
+
+    print(f'AI rusza sie na wiersz: {x}, kolumna: {y}')
 
     board[x][y] == 'O'
     return board
