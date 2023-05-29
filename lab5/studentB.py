@@ -7,9 +7,6 @@ def is_player_starting():
 
 def ai_move(board):
 
-    if ' ' not in board:
-        return board
-
     print('Ruch AI')
 
     x = randint(0, 4)
@@ -21,17 +18,17 @@ def ai_move(board):
 
     print(f'AI rusza sie na wiersz: {x}, kolumna: {y}')
 
-    board[x][y] == 'O'
+    board[x][y] == 'A'
     return board
 
 
 def get_user_move(board):
 
-    if ' ' not in board:
-        return board
-
     x = input('Podaj numer wiersza: ')
     y = input('podaj numer kolumny: ')
+
+    x = int(x)
+    y = int(y)
 
     if board[x][y] != ' ':
         print("Nie mozna wykonac ruchu!")
